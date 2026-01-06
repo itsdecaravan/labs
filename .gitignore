@@ -1,0 +1,29 @@
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# C / C++
+*.o
+*.out
+*.a
+*.so
+*.exe
+build/
+bin/
+
+# Logs / generated data
+*.log
+*.tmp
+*.bak
