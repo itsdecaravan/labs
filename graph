@@ -1,0 +1,101 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def plot_linear():
+    x = np.arange(-10, 11)
+    y = 2 * x + 1
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.title("Linear Graph: y = 2x + 1")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.grid()
+    plt.show()
+
+
+def plot_quadratic():
+    x = np.linspace(-10, 10, 200)
+    y = 0.1 * x**2
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.title("Quadratic Graph: y = 0.1x²")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.grid()
+    plt.show()
+
+
+def plot_cubic():
+    x = np.linspace(-10, 10, 200)
+    a, b, c, d = 0.01, 0, 0, 0
+    y = a * x**3 + b * x**2 + c * x + d
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.title(f"Cubic Graph: y = {a}x³ + {b}x² + {c}x + {d}")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.grid()
+    plt.show()
+
+
+def plot_exponential():
+    x = np.linspace(-2, 2, 500)
+    y = np.exp(2 * x)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.title("Exponential Graph: y = e^(2x)")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.grid()
+    plt.show()
+
+
+def plot_reciprocal():
+    x_left = np.linspace(-10, -0.1, 500)
+    x_right = np.linspace(0.1, 10, 500)
+
+    y_left = 2 / x_left
+    y_right = 2 / x_right
+
+    plt.figure()
+    plt.plot(x_left, y_left)
+    plt.plot(x_right, y_right)
+    plt.title("Reciprocal Graph: y = 2/x")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.grid()
+    plt.show()
+
+
+def plot_circle():
+    t = np.linspace(0, 2 * np.pi, 400)
+    r = 2
+
+    x = r * np.cos(t)
+    y = r * np.sin(t)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.title("Circle: x = 2cos(t), y = 2sin(t)")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.axis("equal")
+    plt.grid()
+    plt.show()
+
+
+def main():
+    plot_linear()
+    plot_quadratic()
+    plot_cubic()
+    plot_exponential()
+    plot_reciprocal()
+    plot_circle()
+
+
+main()

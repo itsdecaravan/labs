@@ -1,0 +1,42 @@
+# Logic gate functions using 0 and 1 
+
+def OR(A, B):
+    return A | B
+
+def AND(A, B):
+    return A & B
+
+def XOR(A, B):
+    return A ^ B
+
+def NOT(A):
+    return 1 - A
+
+
+# Helper function to print a truth table for 2-input gates
+def print_two_input_truth_table(name, gate_func):
+    print(f"\nTruth table for {name} gate")
+    print("A B | Output")
+    print("------------")
+    for A in (0, 1):
+        for B in (0, 1):
+            print(f"{A} {B} |   {gate_func(A, B)}")
+
+
+# Print truth tables for 2-input gates
+print_two_input_truth_table("OR", OR)
+print_two_input_truth_table("AND", AND)
+print_two_input_truth_table("XOR", XOR)
+
+
+# Truth table for NOT gate (single input)
+print("\nTruth table for NOT gate")
+print("A | Output")
+print("----------")
+for A in (0, 1):
+    print(f"{A} |   {NOT(A)}")
+
+
+# Optional: show number of possible input combinations
+n = 2
+print("\nNumber of possible input combinations for", n, "inputs:", 2 ** n)
