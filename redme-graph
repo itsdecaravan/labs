@@ -1,0 +1,74 @@
+📈 Graph Plotter (Python)
+
+A collection of mathematical graph visualisations built using Python, NumPy, and Matplotlib.
+This project explores different types of equations including standard functions, parametric curves, and implicit equations.
+
+✨ Features
+📉 Linear graphs
+📊 Quadratic and cubic functions
+📈 Exponential growth
+🔄 Reciprocal functions (with asymptotes)
+⚪ Parametric circle
+❤️ Heart curve (implicit equation)
+🦋 Butterfly curve (parametric / polar)
+🧠 What this project demonstrates
+
+This project shows three key ways of plotting mathematical functions:
+
+1. Standard Functions
+
+Functions of the form:
+
+y = f(x)
+
+Example:
+
+Linear
+Quadratic
+Cubic
+2. Parametric Equations
+
+Points are generated using a parameter t:
+
+x = f(t)
+y = g(t)
+
+Example:
+
+Circle
+Butterfly curve
+3. Implicit Equations
+
+Equations where x and y are combined:
+
+f(x, y) = 0
+
+These are plotted by testing a grid of values and drawing where the equation equals zero.
+
+Example:
+
+Heart curve
+🛠️ Technologies Used
+Python 3
+NumPy
+Matplotlib
+▶️ How to Run
+Install dependencies:
+pip install numpy matplotlib
+Run the script:
+python graph_plotter.py
+📌 Notes
+All graphs are generated mathematically (no pre-built shapes)
+Focus is on understanding how equations translate into visual output
+Useful for learning:
+Graphing techniques
+Mathematical visualisation
+Python plotting
+🚀 Future Improvements
+Interactive UI (sliders for variables like a)
+Export graphs as images
+Combine all plots into a single dashboard
+Add more advanced curves (Lissajous, spirals, etc.)
+👨‍💻 Author
+
+Built as part of learning Python and mathematical modelling.
