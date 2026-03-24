@@ -3,6 +3,7 @@ import numpy as np
 
 
 def plot_linear():
+    """Plot a linear graph."""
     x = np.arange(-10, 11)
     y = 2 * x + 1
 
@@ -16,6 +17,7 @@ def plot_linear():
 
 
 def plot_quadratic():
+    """Plot a quadratic graph."""
     x = np.linspace(-10, 10, 200)
     y = 0.1 * x**2
 
@@ -29,6 +31,7 @@ def plot_quadratic():
 
 
 def plot_cubic():
+    """Plot a cubic graph."""
     x = np.linspace(-10, 10, 200)
     a, b, c, d = 0.01, 0, 0, 0
     y = a * x**3 + b * x**2 + c * x + d
@@ -43,6 +46,7 @@ def plot_cubic():
 
 
 def plot_exponential():
+    """Plot an exponential graph."""
     x = np.linspace(-2, 2, 500)
     y = np.exp(2 * x)
 
@@ -56,6 +60,7 @@ def plot_exponential():
 
 
 def plot_reciprocal():
+    """Plot a reciprocal graph."""
     x_left = np.linspace(-10, -0.1, 500)
     x_right = np.linspace(0.1, 10, 500)
 
@@ -73,6 +78,7 @@ def plot_reciprocal():
 
 
 def plot_circle():
+    """Plot a circle using parametric equations."""
     t = np.linspace(0, 2 * np.pi, 400)
     r = 2
 
@@ -89,13 +95,56 @@ def plot_circle():
     plt.show()
 
 
+def plot_heart():
+    """Plot a heart curve using an implicit equation."""
+    x = np.linspace(-10, 10, 400)
+    y = np.linspace(-10, 10, 400)
+    x_grid, y_grid = np.meshgrid(x, y)
+
+    a = 2
+    z = (x_grid**2 + y_grid**2 - a * x_grid) ** 2 - a**2 * (
+        x_grid**2 + y_grid**2
+    )
+
+    plt.figure()
+    plt.contour(x_grid, y_grid, z, levels=[0])
+    plt.title("Heart Curve")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.axis("equal")
+    plt.grid()
+    plt.show()
+
+
+def plot_butterfly():
+    """Plot a butterfly curve using polar-style equations."""
+    t = np.linspace(0, 12 * np.pi, 2000)
+
+    r = np.exp(np.cos(t)) - 2 * np.cos(4 * t) + np.sin(t / 12) ** 5
+    x = r * np.cos(t)
+    y = r * np.sin(t)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.title("Butterfly Curve")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.axis("equal")
+    plt.grid()
+    plt.show()
+
+
 def main():
+    """Run all graph plotting functions."""
     plot_linear()
     plot_quadratic()
     plot_cubic()
     plot_exponential()
     plot_reciprocal()
     plot_circle()
+    plot_heart()
+    plot_butterfly()
 
 
-main()
+if __name__ == "__main__":
+    main()
